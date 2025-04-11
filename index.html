@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart Healthcare Portal</title>
+  <style>
+    body {
+      background: url('https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=1650&q=80') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    
+    body::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 40, 80, 0.7);
+      z-index: 1;
+    }
+    
+    .content {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      text-align: center;
+    }
+    
+    .logo {
+      margin-bottom: 20px;
+      font-size: 3rem;
+      font-weight: bold;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .logo svg {
+      margin-right: 15px;
+      fill: #00c3ff;
+    }
+    
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    }
+    
+    .tagline {
+      font-size: 1.2rem;
+      margin-bottom: 60px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .container {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 30px;
+      position: relative;
+      flex-wrap: wrap;
+    }
+    
+    .btn-box {
+      position: relative;
+    }
+    
+    .btn-box a {
+      text-decoration: none;
+      display: block;
+      color: white;
+      border: 2px solid #00c3ff;
+      border-radius: 8px;
+      padding: 20px 50px;
+      font-size: 18px;
+      background-color: rgba(0, 195, 255, 0.8);
+      cursor: pointer;
+      overflow: hidden;
+      position: relative;
+      font-weight: bold;
+      transition: all 0.3s ease-in-out;
+      box-shadow: 0 4px 15px rgba(0, 195, 255, 0.3);
+    }
+    
+    .btn-box a:hover {
+      background: transparent;
+      color: white;
+      border-color: white;
+      box-shadow: 0 0 25px #00c3ff;
+      transform: translateY(-3px);
+    }
+    
+    .btn-icon {
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+    
+    .stars {
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      background-color: white;
+      transform: rotate(45deg);
+      box-shadow: 0 0 10px white;
+      opacity: 0;
+      transition: transform 0.5s ease-out, opacity 0.5s ease-in-out;
+      z-index: 3;
+    }
+    
+    .stars.large {
+      width: 10px;
+      height: 10px;
+    }
+    
+    footer {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      text-align: center;
+      margin-top: 80px;
+      padding: 20px 0;
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.7);
+    }
+    
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      h1 {
+        font-size: 2rem;
+      }
+      
+      .btn-box a {
+        padding: 15px 40px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <div class="logo">
+      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
+        <path d="M19 3H5c-1.1 0-1.99.9-1.99 2L3 19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 11h-4v4h-4v-4H6v-4h4V6h4v4h4v4z"/>
+      </svg>
+      Smart Care
+    </div>
+    
+    <h1>Welcome to Smart Healthcare Portal</h1>
+    <p class="tagline">Connecting healthcare professionals and patients for better care outcomes through our integrated digital platform.</p>
+    
+    <div class="container">
+      <div class="btn-box">
+        <a href="doctor-portal.html" class="glow-button">
+          <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20 6h-4V4c0-1.1-.9-2-2-2h-4c-1.1 0-2 .9-2 2v2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zM10 4h4v2h-4V4zm6 11h-3v3h-2v-3H8v-2h3V9h2v4h3v2z"/>
+          </svg>
+          Doctor Portal
+        </a>
+      </div>
+      <div class="btn-box">
+        <a href="patient-portal.html" class="glow-button">
+          <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+          </svg>
+          Patient Portal
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <footer>
+    © 2025 Smart Care Health Services. All rights reserved.
+  </footer>
+  
+  <script>
+    const buttons = document.querySelectorAll(".glow-button");
+    buttons.forEach(button => {
+      let stars = [];
+      button.addEventListener("mouseover", () => {
+        removeStars();
+        for (let i = 0; i < 5; i++) {
+          let star = document.createElement("div");
+          star.classList.add("stars");
+          if (Math.random() > 0.5) star.classList.add("large");
+          document.body.appendChild(star);
+          let rect = button.getBoundingClientRect();
+          let x = Math.random() * rect.width + rect.left;
+          let y = Math.random() * rect.height + rect.top;
+          star.style.left = `${x}px`;
+          star.style.top = `${y}px`;
+          setTimeout(() => {
+            let angle = Math.random() * 2 * Math.PI;
+            let distance = Math.random() * 50 + 20;
+            star.style.transform = `rotate(45deg) translate(${Math.cos(angle) * distance}px, ${Math.sin(angle) * distance}px)`;
+            star.style.opacity = "1";
+          }, 50);
+          stars.push(star);
+        }
+      });
+      button.addEventListener("mouseleave", () => {
+        removeStars();
+      });
+      function removeStars() {
+        stars.forEach(star => {
+          star.style.opacity = "0";
+          setTimeout(() => star.remove(), 500);
+        });
+        stars = [];
+      }
+    });
+  </script>
+</body>
+</html>
